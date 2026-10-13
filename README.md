@@ -9,11 +9,11 @@
 
 工坊尚未提供共用生成帳號、免費模型額度或平台自動渲染服務；每個 provider 的能力需按當前版本確認。
 
-工坊 Fork：上游產品／授權來源為 [Hao0321/ai-media-generator](https://github.com/Hao0321/ai-media-generator)；本次協作的 Issue／PR 送到 **FreeTWAI-AI/ai-media-generator**，不是自動送往上游。
+工坊 Fork：上游產品／授權來源為 [Hao0321/ai-media-generator](https://github.com/Hao0321/ai-media-generator)；本次協作的 Issue／PR 送到 **FreeTWAI/ai-media-generator**，不是自動送往上游。
 
-程式／內容入口：[SKILL.md](SKILL.md)、[automation/](automation/)、[references/](references/)、[templates/](templates/)、[evals/](evals/)。協作先讀 [CONTRIBUTING.md](CONTRIBUTING.md)，讓 Agent 讀 [AGENTS.md](AGENTS.md)；從[本倉 Issues](https://github.com/FreeTWAI-AI/ai-media-generator/issues)認領、[查看既有 PR](https://github.com/FreeTWAI-AI/ai-media-generator/pulls)避免重工。
+程式／內容入口：[SKILL.md](SKILL.md)、[automation/](automation/)、[references/](references/)、[templates/](templates/)、[evals/](evals/)。協作先讀 [CONTRIBUTING.md](CONTRIBUTING.md)，讓 Agent 讀 [AGENTS.md](AGENTS.md)；從[本倉 Issues](https://github.com/FreeTWAI/ai-media-generator/issues)認領、[查看既有 PR](https://github.com/FreeTWAI/ai-media-generator/pulls)避免重工。
 
-Skill 是使用者自己的工具；訂閱、provider 授權與本人操作不轉移到中央平台。平台只保存技能書來源／公開成果 ref，不接收私人 prompts、登入憑證或未授权媒體。 跨 repo 的協定由[中央平台](https://github.com/FreeTWAI-AI/freedom-platform)維護。
+Skill 是使用者自己的工具；訂閱、provider 授權與本人操作不轉移到中央平台。平台只保存技能書來源／公開成果 ref，不接收私人 prompts、登入憑證或未授权媒體。 跨 repo 的協定由[中央平台](https://github.com/FreeTWAI/freedom-platform)維護。
 <!-- freedom-repository-guide:end -->
 
 > **零門檻做出專業 AI 影片 / 圖片 / 音樂 — 讓 Codex 或 Claude Code 幫你套上「資深導演級」提示詞。**
