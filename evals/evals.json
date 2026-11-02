@@ -158,6 +158,50 @@
         {"text": "All skeletons retain provider capability gating and do not claim announced Seedance 2.5 features are universally executable"}
       ],
       "files": []
+    },
+    {
+      "id": 10,
+      "eval_name": "e2e-task-submission-fallback",
+      "prompt": "執行自動化送出時，如果頁面上的發送按鈕 CSS class 變更，應該如何處理？",
+      "expected_output": "應該提供多種 fallback selectors（例如嘗試不同的 class、或是靠位置找最右下角的按鈕），確保 task submission 不因為單一 class 改變而失敗。",
+      "assertions": [
+        {"text": "Tests for the presence of fallback selectors for the submit button"},
+        {"text": "Tests that submission succeeds even if the primary CSS selector fails"}
+      ],
+      "files": []
+    },
+    {
+      "id": 11,
+      "eval_name": "e2e-queue-processing-visual-check",
+      "prompt": "在 Flow UI 中，如果偵測不到『排隊中』的文字關鍵字，該怎麼確認任務有在 queue 中避免重複送出？",
+      "expected_output": "必須透過截圖或 DOM 檢查 gallery 區域是否出現新的生成中 tile (如灰漸層 shimmer tile)，不能單靠文字偵測失敗就直接重送，避免消耗大量點數。",
+      "assertions": [
+        {"text": "Tests that queue processing is visually verified in the gallery tile"},
+        {"text": "Tests that duplicate submission is prevented when text-based queue detection fails"}
+      ],
+      "files": []
+    },
+    {
+      "id": 12,
+      "eval_name": "e2e-timeout-handling-batch-clicks",
+      "prompt": "在 OiiOii 介面上連續點擊多個按鈕 (例如設定參數+截圖) 導致 Chrome renderer 凍結或 timeout，該如何避免？",
+      "expected_output": "必須在自動化腳本中加入等待策略（deliberate wait strategies / setTimeout），避免連續過快的操作導致 renderer freeze 與後續 screenshot timeout。",
+      "assertions": [
+        {"text": "Tests that deliberate wait strategies are implemented between UI interactions"},
+        {"text": "Tests that screenshot timeout is avoided by preventing renderer freeze"}
+      ],
+      "files": []
+    },
+    {
+      "id": 13,
+      "eval_name": "e2e-failure-recovery-fresh-renderer",
+      "prompt": "在同一個 tab 開啟超過 10 個 space 導致 canvas 變重、面板打不開，自動化流程該怎麼恢復？",
+      "expected_output": "必須偵測到性能下降或 timeout 後，關閉舊 tab 或開新分頁 (fresh renderer) navigate 到首頁重來，以恢復正常的任務處理狀態。",
+      "assertions": [
+        {"text": "Tests detection of degraded canvas state or timeouts"},
+        {"text": "Tests recovery mechanism by opening a fresh browser tab or renderer"}
+      ],
+      "files": []
     }
   ]
 }
